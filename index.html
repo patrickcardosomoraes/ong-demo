@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Acolher Instituto — Apoie nossos programas sociais</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --plum:#5E035F;
+    --plum-2:#7a2c7c;
+    --mauve:#9c4d86;
+    --ink:#2a2330;
+    --muted:#6b6472;
+    --soft:#6f6877;
+    --lav:#faf7fb;
+    --lav2:#f4ecf5;
+    --line:#ece4ee;
+    --green:#1f9d57;
+    --white:#fff;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Roboto',sans-serif;color:var(--ink);line-height:1.7;background:var(--white);-webkit-font-smoothing:antialiased}
+  h1,h2,h3,h4{font-family:'Poppins',sans-serif}
+  img{max-width:100%;display:block}
+  a{text-decoration:none;color:inherit}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+  .btn{display:inline-flex;align-items:center;gap:8px;font-family:'Poppins';font-weight:500;border:none;cursor:pointer;
+    border-radius:10px;padding:13px 24px;font-size:15px;transition:.18s;line-height:1}
+  .btn-primary{background:var(--plum);color:#fff}
+  .btn-primary:hover{background:var(--plum-2)}
+  .btn-soft{background:var(--lav2);color:var(--plum)}
+  .btn-soft:hover{background:#ead9ec}
+  .btn-outline{background:#fff;color:var(--plum);border:1px solid var(--line)}
+  .btn-outline:hover{border-color:var(--plum);background:var(--lav)}
+  .eyebrow{font-family:'Poppins';font-weight:600;letter-spacing:1.5px;text-transform:uppercase;font-size:12px;color:var(--mauve)}
+  .section{padding:84px 0}
+  .center{text-align:center}
+  .sec-title{font-size:clamp(26px,3.4vw,38px);font-weight:600;color:var(--plum);line-height:1.2;margin:12px 0 14px;letter-spacing:-.5px}
+  .sec-sub{color:var(--muted);font-size:17px;max-width:680px;margin:0 auto}
+  .topbar{background:var(--lav);border-bottom:1px solid var(--line);font-size:13px;color:var(--soft)}
+  .topbar .wrap{display:flex;justify-content:space-between;align-items:center;height:38px;flex-wrap:wrap;gap:8px}
+  .topbar .social a{margin-left:16px}
+  .topbar .social a:hover{color:var(--plum)}
+  header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+  .brand{display:flex;align-items:center;gap:11px}
+  .brand .mark{width:40px;height:40px;border-radius:11px;background:var(--plum);display:flex;align-items:center;justify-content:center;
+    color:#fff;font-family:'Poppins';font-weight:600;font-size:19px}
+  .brand .name{font-family:'Poppins';font-weight:600;font-size:17px;color:var(--plum);line-height:1.15}
+  .brand .name span{display:block;font-size:10.5px;font-weight:400;letter-spacing:.6px;color:var(--soft);text-transform:uppercase}
+  .menu{display:flex;gap:28px;align-items:center}
+  .menu a{font-family:'Poppins';font-weight:400;font-size:14.5px;color:var(--muted);transition:.18s}
+  .menu a:hover{color:var(--plum)}
+  .nav-cta{display:flex;align-items:center;gap:12px}
+  .burger{display:none;background:none;border:none;cursor:pointer;font-size:24px;color:var(--plum)}
+  .hero{background:linear-gradient(180deg,var(--lav) 0%,#fff 100%);position:relative;overflow:hidden}
+  .hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center;padding:88px 24px}
+  .badge{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--line);border-radius:999px;
+    padding:7px 15px;font-size:12.5px;font-family:'Poppins';font-weight:500;color:var(--plum)}
+  .badge .dot{width:7px;height:7px;border-radius:50%;background:var(--green)}
+  .hero h1{font-size:clamp(33px,4.6vw,52px);font-weight:700;line-height:1.12;margin:20px 0 18px;color:var(--ink);letter-spacing:-1px}
+  .hero h1 em{font-style:normal;color:var(--plum)}
+  .hero p{font-size:18px;color:var(--muted);max-width:500px;margin-bottom:28px}
+  .hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+  .hero-card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:32px;box-shadow:0 18px 50px rgba(94,3,95,.07)}
+  .hero-stats{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+  .hero-stats .item .n{font-family:'Poppins';font-weight:700;font-size:32px;color:var(--plum);line-height:1;letter-spacing:-1px}
+  .hero-stats .item .l{font-size:13.5px;color:var(--muted);margin-top:6px;line-height:1.4}
+  .hero-card .div{height:1px;background:var(--line);margin:24px 0}
+  .hero-card .foot{font-size:13px;color:var(--soft);display:flex;align-items:center;gap:8px}
+  .trust{border-bottom:1px solid var(--line)}
+  .trust .wrap{display:flex;flex-wrap:wrap;justify-content:center;gap:40px;padding:24px}
+  .trust .t{display:flex;align-items:center;gap:9px;color:var(--muted);font-size:14px;font-family:'Poppins';font-weight:400}
+  .trust .t b{color:var(--ink);font-weight:500}
+  .trust .ic{color:var(--plum)}
+  .doe{background:var(--lav)}
+  .doe-grid{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:start}
+  .doe-info h2{font-size:clamp(25px,3.2vw,34px);font-weight:600;color:var(--plum);margin-bottom:16px;line-height:1.25;letter-spacing:-.5px}
+  .doe-info p{color:var(--muted);font-size:16px;margin-bottom:16px}
+  .doe-info .note{background:#fff;border:1px solid var(--line);border-left:3px solid var(--mauve);border-radius:10px;
+    padding:15px 17px;font-size:14.5px;color:var(--muted)}
+  .card{background:#fff;border-radius:18px;border:1px solid var(--line);box-shadow:0 18px 50px rgba(94,3,95,.07);overflow:hidden}
+  .card-head{padding:22px 24px;border-bottom:1px solid var(--line)}
+  .card-head .camp{display:inline-flex;align-items:center;gap:7px;background:var(--lav2);color:var(--plum);border-radius:999px;
+    padding:5px 12px;font-size:12px;font-family:'Poppins';font-weight:500;margin-bottom:9px}
+  .card-head h3{font-size:20px;font-weight:600;color:var(--ink)}
+  .card-body{padding:24px}
+  .toggle{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:20px}
+  .toggle button{font-family:'Poppins';font-weight:500;font-size:13.5px;border:1px solid var(--line);background:#fff;
+    color:var(--muted);border-radius:11px;padding:13px 12px;cursor:pointer;transition:.18s;text-align:left}
+  .toggle button .small{display:block;font-weight:400;font-size:11.5px;color:var(--soft);margin-top:3px}
+  .toggle button.active{border-color:var(--plum);background:var(--lav);color:var(--plum)}
+  .helper{font-size:13px;color:var(--soft);margin-bottom:14px}
+  .values{display:grid;grid-template-columns:1fr 1fr;gap:11px;margin-bottom:18px}
+  .val{position:relative;border:1px solid var(--line);border-radius:11px;padding:15px;cursor:pointer;transition:.18s;text-align:center}
+  .val:hover{border-color:var(--mauve)}
+  .val .amount{font-family:'Poppins';font-weight:600;font-size:19px;color:var(--ink)}
+  .val .desc{font-size:12px;color:var(--soft);margin-top:2px}
+  .val.active{border-color:var(--plum);background:var(--lav)}
+  .val.active .amount{color:var(--plum)}
+  .val .tag{position:absolute;top:-9px;right:10px;background:var(--green);color:#fff;font-size:10px;font-family:'Poppins';
+    font-weight:500;padding:3px 9px;border-radius:999px}
+  .val.full{grid-column:1/-1}
+  .val.full input{border:none;outline:none;font-family:'Poppins';font-weight:500;font-size:16px;width:100%;text-align:center;color:var(--plum);background:transparent}
+  .progress-box{background:var(--lav);border:1px solid var(--line);border-radius:12px;padding:15px;margin-bottom:18px}
+  .progress-top{display:flex;justify-content:space-between;font-size:13.5px;margin-bottom:8px;color:var(--muted)}
+  .progress-top b{font-family:'Poppins';color:var(--plum);font-weight:600}
+  .bar{height:9px;background:#eadff0;border-radius:999px;overflow:hidden}
+  .bar i{display:block;height:100%;width:100%;background:var(--green);border-radius:999px}
+  .progress-msg{margin-top:9px;font-size:12.5px;color:var(--green);font-weight:500;font-family:'Poppins'}
+  .card .btn{width:100%;justify-content:center}
+  .secure{display:flex;align-items:center;justify-content:center;gap:6px;font-size:12px;color:var(--soft);margin-top:11px}
+  .essencial .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+  .essencial p{color:var(--muted);font-size:16px;margin-bottom:16px}
+  .essencial p strong{color:var(--plum);font-weight:500}
+  .tags{display:flex;flex-wrap:wrap;gap:9px;margin-top:6px}
+  .tags span{background:var(--lav);border:1px solid var(--line);color:var(--plum);font-family:'Poppins';font-weight:400;
+    font-size:13.5px;padding:8px 15px;border-radius:999px}
+  .quote{background:var(--lav);border:1px solid var(--line);border-radius:18px;padding:40px}
+  .quote .mark{font-family:'Poppins';font-size:54px;line-height:.6;color:#d9b9da}
+  .quote .q{font-family:'Poppins';font-weight:500;font-size:21px;line-height:1.5;color:var(--ink);margin:6px 0 16px}
+  .quote .who{font-size:14px;color:var(--mauve);font-family:'Poppins';font-weight:500}
+  .transform{background:var(--lav)}
+  .cards3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:44px}
+  .pcard{background:#fff;border-radius:16px;overflow:hidden;border:1px solid var(--line);transition:.2s}
+  .pcard:hover{transform:translateY(-4px);box-shadow:0 16px 36px rgba(94,3,95,.08)}
+  .pcard .thumb{height:170px;background:var(--lav2);display:flex;align-items:center;justify-content:center}
+  .pcard .thumb img{height:110px;width:auto;object-fit:contain}
+  .pcard .pbody{padding:24px}
+  .pcard h3{font-size:19px;font-weight:600;color:var(--plum);margin-bottom:9px}
+  .pcard p{color:var(--muted);font-size:14.5px}
+  .pcard .more{display:inline-flex;align-items:center;gap:6px;margin-top:14px;color:var(--mauve);font-family:'Poppins';font-weight:500;font-size:13.5px}
+  .viabiliza .wrap{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center}
+  .viabiliza h2{font-size:clamp(25px,3.2vw,34px);font-weight:600;color:var(--plum);line-height:1.25;margin-bottom:15px;letter-spacing:-.5px}
+  .viabiliza p{font-size:16px;color:var(--muted);margin-bottom:24px}
+  .vlist{display:grid;gap:12px}
+  .vitem{display:flex;gap:14px;align-items:flex-start;background:var(--lav);border:1px solid var(--line);border-radius:13px;padding:17px 19px}
+  .vitem .ic{flex:0 0 38px;height:38px;border-radius:10px;background:var(--lav2);display:flex;align-items:center;justify-content:center;
+    font-size:18px;color:var(--plum)}
+  .vitem b{font-family:'Poppins';font-weight:500;display:block;margin-bottom:2px;color:var(--ink)}
+  .vitem small{color:var(--muted);font-size:13.5px}
+  .ctafinal{background:var(--lav)}
+  .ctafinal .box{background:#fff;border:1px solid var(--line);border-radius:22px;box-shadow:0 18px 50px rgba(94,3,95,.06);
+    padding:54px;text-align:center}
+  .ctafinal h2{font-size:clamp(24px,3vw,34px);font-weight:600;color:var(--plum);margin-bottom:13px;letter-spacing:-.5px}
+  .ctafinal p{color:var(--muted);font-size:17px;max-width:560px;margin:0 auto 26px}
+  footer{background:#fff;border-top:1px solid var(--line);padding:60px 0 26px}
+  .fgrid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:36px}
+  footer p{font-size:14px;color:var(--muted);margin-top:14px;max-width:290px}
+  footer h4{font-family:'Poppins';font-weight:600;color:var(--plum);font-size:14px;margin-bottom:15px}
+  footer ul{list-style:none;display:grid;gap:9px}
+  footer ul a{font-size:14px;color:var(--muted);transition:.18s}
+  footer ul a:hover{color:var(--plum)}
+  .fbottom{border-top:1px solid var(--line);margin-top:40px;padding-top:22px;display:flex;justify-content:space-between;
+    flex-wrap:wrap;gap:10px;font-size:12.5px;color:var(--soft)}
+  @media(max-width:900px){
+    .menu{display:none}
+    .burger{display:block}
+    .hero .wrap{grid-template-columns:1fr;gap:40px;padding:60px 24px}
+    .doe-grid,.essencial .wrap,.viabiliza .wrap{grid-template-columns:1fr;gap:38px}
+    .cards3{grid-template-columns:1fr}
+    .fgrid{grid-template-columns:1fr 1fr}
+    .section{padding:60px 0}
+    .ctafinal .box{padding:36px 24px}
+  }
+  @media(max-width:520px){
+    .fgrid{grid-template-columns:1fr}
+    .values{grid-template-columns:1fr}
+    .topbar .left{display:none}
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <div class="left">Guarulhos – SP · Desde 2005 transformando vidas</div>
+    <div class="social">
+      contato@acolherinstituto.org.br
+      <a href="#">Instagram</a>
+      <a href="#">Facebook</a>
+      <a href="#">WhatsApp</a>
+    </div>
+  </div>
+</div>
+
+<header>
+  <div class="wrap nav">
+    <a href="#" class="brand">
+      <div class="mark">A</div>
+      <div class="name">Acolher Instituto<span>Causa do idoso · Guarulhos</span></div>
+    </a>
+    <nav class="menu">
+      <a href="#inicio">Início</a>
+      <a href="#essencial">Quem Somos</a>
+      <a href="#programas">Programas</a>
+      <a href="#viabiliza">Transparência</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="#doar" class="btn btn-primary">Doar agora</a>
+      <button class="burger" aria-label="Menu">☰</button>
+    </div>
+  </div>
+</header>
+
+<section class="hero" id="inicio">
+  <div class="wrap">
+    <div>
+      <span class="badge"><span class="dot"></span> Apoie nossos programas sociais</span>
+      <h1>Pequenos gestos que <em>mudam vidas</em> em Guarulhos</h1>
+      <p>Desde 2005 capacitamos educadores infantis, cuidadores de idosos e projetos sociais que transformam comunidades inteiras.</p>
+      <div class="hero-actions">
+        <a href="#doar" class="btn btn-primary">Quero fazer uma doação</a>
+        <a href="#essencial" class="btn btn-outline">Conheça a causa</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="hero-stats">
+        <div class="item"><div class="n">+20</div><div class="l">anos de atuação social</div></div>
+        <div class="item"><div class="n">5</div><div class="l">programas ativos</div></div>
+        <div class="item"><div class="n">+1.000</div><div class="l">amigos apoiadores</div></div>
+        <div class="item"><div class="n">100%</div><div class="l">capacitação gratuita</div></div>
+      </div>
+      <div class="div"></div>
+      <div class="foot">Organização sem fins lucrativos · Recibo garantido</div>
+    </div>
+  </div>
+</section>
+
+<div class="trust">
+  <div class="wrap">
+    <div class="t"><span class="ic">●</span> <b>ONG sem fins lucrativos</b></div>
+    <div class="t"><span class="ic">●</span> <b>Doação 100% segura</b></div>
+    <div class="t"><span class="ic">●</span> <b>Recibo garantido</b></div>
+    <div class="t"><span class="ic">●</span> <b>Transparência total</b></div>
+  </div>
+</div>
+
+<section class="section doe" id="doar">
+  <div class="wrap doe-grid">
+    <div class="doe-info">
+      <span class="eyebrow">Faça uma doação</span>
+      <h2>Doar é um ato de cidadania e solidariedade</h2>
+      <p>Doar é capaz de elevar a felicidade do doador, gerando bem-estar psicológico e emocional — ao mesmo tempo em que mantém vivos projetos que mudam vidas.</p>
+      <p>Se você quiser apoiar nossas atividades com doação em dinheiro, escolha entre as opções disponíveis. Nós providenciamos o recibo e mantemos você informado sobre os resultados da sua contribuição.</p>
+      <div class="note">A instituição <strong>nunca</strong> irá te ligar pedindo doação. Toda contribuição é feita exclusivamente pelos canais oficiais.</div>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <span class="camp">Campanha: 1000 amigos</span>
+        <h3>Faça sua doação</h3>
+      </div>
+      <div class="card-body">
+        <div class="toggle">
+          <button class="active" onclick="setType(this,'mensal')">Apoio mensal <span class="small">Ajuda contínua aos projetos</span></button>
+          <button onclick="setType(this,'unica')">Doação única <span class="small">Contribuição pontual</span></button>
+        </div>
+        <p class="helper" id="helper">Sua doação mensal mantém o projeto ativo.</p>
+
+        <div class="values">
+          <div class="val" onclick="setVal(this,20)"><div class="amount">R$ 20</div><div class="desc">Ajuda 1 pessoa</div></div>
+          <div class="val active" onclick="setVal(this,50)"><span class="tag">Mais escolhido</span><div class="amount">R$ 50</div><div class="desc">Ajuda 3 pessoas</div></div>
+          <div class="val" onclick="setVal(this,100)"><div class="amount">R$ 100</div><div class="desc">Ajuda 6 pessoas</div></div>
+          <div class="val" onclick="setVal(this,150)"><div class="amount">R$ 150</div><div class="desc">Ajuda 10 pessoas</div></div>
+          <div class="val full" onclick="document.getElementById('outro').focus()">
+            <input id="outro" type="number" placeholder="Outro valor (R$)" oninput="clearVals()">
+          </div>
+        </div>
+
+        <div class="progress-box">
+          <div class="progress-top"><span>Arrecadado</span><b>R$ 13.234 de R$ 5.000</b></div>
+          <div class="bar"><i></i></div>
+          <div class="progress-msg">Meta alcançada — ampliando o impacto do projeto (+165%)</div>
+        </div>
+
+        <button class="btn btn-primary" onclick="doar()">Fazer doação <span id="btnval">mensal de R$ 50</span></button>
+        <div class="secure">Você será redirecionado para o checkout seguro</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section essencial" id="essencial">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">Porque sua ajuda é essencial</span>
+      <h2 class="sec-title" style="text-align:left">Representamos a causa do idoso em Guarulhos</h2>
+      <p>O <strong>Acolher Instituto</strong> representa a causa do idoso no município de <strong>Guarulhos</strong>, contribuindo para a conscientização e o engajamento da sociedade e promovendo ações sociais por meio de parcerias para capacitação gratuita.</p>
+      <p>Atuamos através dos programas que administramos:</p>
+      <div class="tags">
+        <span>Acolher Idoso</span>
+        <span>Dança Sênior</span>
+        <span>#VaiAcolherComAmor</span>
+        <span>Adote um Cuidador</span>
+        <span>Selo Amigo da Pessoa Idosa</span>
+      </div>
+    </div>
+    <div class="quote">
+      <div class="mark">“</div>
+      <div class="q">Cada doação fortalece uma rede de cuidado, dignidade e respeito à pessoa idosa.</div>
+      <div class="who">Acolher Instituto · desde 2005</div>
+    </div>
+  </div>
+</section>
+
+<section class="section transform" id="programas">
+  <div class="wrap center">
+    <span class="eyebrow">Faça parte da transformação</span>
+    <h2 class="sec-title">Programas que mudam realidades</h2>
+    <p class="sec-sub">Sua doação fortalece nossos programas sociais como o Acolher Educação, Acolher Longevidade e Acolher Emprego.</p>
+    <div class="cards3">
+      <div class="pcard">
+        <div class="thumb"><img src="https://ong.donatech.cloud/wp-content/uploads/2026/01/acolher_educacao.png" alt="Acolher Educação"></div>
+        <div class="pbody">
+          <h3>Acolher Educação</h3>
+          <p>Formação qualificada e gratuita para educadores infantis, ampliando a qualidade do cuidado e do ensino na primeira infância.</p>
+          <span class="more">Saiba mais →</span>
+        </div>
+      </div>
+      <div class="pcard">
+        <div class="thumb"><img src="https://ong.donatech.cloud/wp-content/uploads/2026/01/acolher_longevidade.png" alt="Acolher Longevidade"></div>
+        <div class="pbody">
+          <h3>Acolher Longevidade</h3>
+          <p>Capacitação de cuidadores de idosos e ações de cidadania que promovem dignidade, saúde e bem-estar na terceira idade.</p>
+          <span class="more">Saiba mais →</span>
+        </div>
+      </div>
+      <div class="pcard">
+        <div class="thumb"><img src="https://ong.donatech.cloud/wp-content/uploads/2026/01/acolher_emprego.png" alt="Acolher Emprego"></div>
+        <div class="pbody">
+          <h3>Acolher Emprego</h3>
+          <p>Preparação profissional de pessoas em situação de vulnerabilidade, abrindo portas para a geração de renda e autonomia.</p>
+          <span class="more">Saiba mais →</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section viabiliza" id="viabiliza">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">Transparência</span>
+      <h2>Como sua doação viabiliza capacitação gratuita</h2>
+      <p>Os recursos arrecadados são usados para manter e expandir nossos cursos e projetos gratuitos, garantindo formação qualificada a educadores infantis, cuidadores de idosos e a preparação profissional de pessoas em vulnerabilidade.</p>
+      <a href="#doar" class="btn btn-primary">Quero fazer uma doação</a>
+    </div>
+    <div class="vlist">
+      <div class="vitem"><div class="ic">◎</div><div><b>Cursos gratuitos</b><small>Manutenção e expansão das turmas de capacitação.</small></div></div>
+      <div class="vitem"><div class="ic">◎</div><div><b>Apoio ao idoso</b><small>Programas de longevidade, dança sênior e cuidado contínuo.</small></div></div>
+      <div class="vitem"><div class="ic">◎</div><div><b>Geração de renda</b><small>Preparação profissional para pessoas em vulnerabilidade.</small></div></div>
+      <div class="vitem"><div class="ic">◎</div><div><b>Prestação de contas</b><small>Recibo garantido e acompanhamento dos resultados.</small></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section ctafinal" id="contato">
+  <div class="wrap">
+    <div class="box">
+      <span class="eyebrow">Junte-se a nós</span>
+      <h2>Faça parte dos 1000 amigos</h2>
+      <p>Cada contribuição sustenta projetos sociais em Guarulhos e transforma uma vida. Doe ou seja voluntário.</p>
+      <div class="hero-actions" style="justify-content:center">
+        <a href="#doar" class="btn btn-primary">Quero doar agora</a>
+        <a href="#" class="btn btn-soft">Seja voluntário</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <div class="brand">
+          <div class="mark">A</div>
+          <div class="name">Acolher Instituto<span>Causa do idoso · Guarulhos</span></div>
+        </div>
+        <p>Desde 2005 capacitando educadores infantis, cuidadores de idosos e projetos sociais que mudam vidas em Guarulhos – SP.</p>
+      </div>
+      <div>
+        <h4>Institucional</h4>
+        <ul>
+          <li><a href="#essencial">Quem Somos</a></li>
+          <li><a href="#programas">Programas</a></li>
+          <li><a href="#viabiliza">Transparência</a></li>
+          <li><a href="#doar">Como ajudar</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Programas</h4>
+        <ul>
+          <li><a href="#">Acolher Educação</a></li>
+          <li><a href="#">Acolher Longevidade</a></li>
+          <li><a href="#">Acolher Emprego</a></li>
+          <li><a href="#">Dança Sênior</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contato</h4>
+        <ul>
+          <li><a href="#">Guarulhos – SP</a></li>
+          <li><a href="#">contato@acolherinstituto.org.br</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">WhatsApp</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="fbottom">
+      <span>© 2026 Acolher Instituto · Todos os direitos reservados</span>
+      <span>Página demonstrativa baseada na identidade visual do site original</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  let tipo='mensal', valor=50;
+  function render(){
+    const t = tipo==='mensal' ? 'mensal' : 'única';
+    document.getElementById('btnval').textContent = valor ? (t+' de R$ '+valor) : ('('+t+')');
+  }
+  function setType(btn,t){
+    tipo=t;
+    document.querySelectorAll('.toggle button').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('helper').textContent = t==='mensal'
+      ? 'Sua doação mensal mantém o projeto ativo.'
+      : 'Sua contribuição pontual também faz a diferença.';
+    render();
+  }
+  function setVal(el,v){
+    valor=v;
+    document.querySelectorAll('.val').forEach(x=>x.classList.remove('active'));
+    el.classList.add('active');
+    document.getElementById('outro').value='';
+    render();
+  }
+  function clearVals(){
+    document.querySelectorAll('.val').forEach(x=>x.classList.remove('active'));
+    valor=parseInt(document.getElementById('outro').value||0); render();
+  }
+  function doar(){
+    alert('Demonstração: você seria redirecionado ao checkout seguro para uma doação '+
+      (tipo==='mensal'?'mensal':'única')+' de R$ '+(valor||0)+'.');
+  }
+  document.querySelector('.burger').addEventListener('click',()=>{
+    const m=document.querySelector('.menu');
+    const open=m.style.display==='flex';
+    m.style.cssText = open ? '' : 'display:flex;position:absolute;flex-direction:column;top:110px;right:24px;background:#fff;padding:16px 22px;border-radius:12px;border:1px solid var(--line);box-shadow:0 16px 40px rgba(94,3,95,.12);gap:14px';
+  });
+  render();
+</script>
+</body>
+</html>
