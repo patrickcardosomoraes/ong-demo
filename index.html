@@ -78,11 +78,20 @@
   .trust .t b{color:var(--ink);font-weight:500}
   .trust .ic{color:var(--plum)}
   .doe{background:var(--lav)}
-  .doe-grid{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:start}
+  .doe-grid{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:stretch}
+  .doe-info{display:flex;flex-direction:column}
   .doe-info h2{font-size:clamp(25px,3.2vw,34px);font-weight:600;color:var(--plum);margin-bottom:16px;line-height:1.25;letter-spacing:-.5px}
   .doe-info p{color:var(--muted);font-size:16px;margin-bottom:16px}
   .doe-info .note{background:#fff;border:1px solid var(--line);border-left:3px solid var(--mauve);border-radius:10px;
     padding:15px 17px;font-size:14.5px;color:var(--muted)}
+  .impact-panel{margin-top:auto;padding-top:24px;display:grid;gap:14px}
+  .impact-panel .label{font-family:'Poppins';font-size:12px;font-weight:600;letter-spacing:1.2px;text-transform:uppercase;color:var(--mauve)}
+  .impact-panel .title{font-family:'Poppins';font-size:18px;font-weight:600;color:var(--ink);line-height:1.25}
+  .impact-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+  .impact-item{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 14px 13px;box-shadow:0 10px 24px rgba(94,3,95,.04)}
+  .impact-item .n{font-family:'Poppins';font-weight:700;font-size:18px;color:var(--plum);line-height:1}
+  .impact-item .txt{margin-top:7px;font-size:12.5px;line-height:1.45;color:var(--muted)}
+  .impact-panel .mini-cta{display:inline-flex;align-items:center;justify-content:center;width:max-content;padding:10px 14px;border-radius:999px;background:var(--lav2);color:var(--plum);font-family:'Poppins';font-size:12.5px;font-weight:600}
   .card{background:#fff;border-radius:18px;border:1px solid var(--line);box-shadow:0 18px 50px rgba(94,3,95,.07);overflow:hidden}
   .card-head{padding:22px 24px;border-bottom:1px solid var(--line)}
   .card-head .camp{display:inline-flex;align-items:center;gap:7px;background:var(--lav2);color:var(--plum);border-radius:999px;
@@ -128,8 +137,8 @@
   .cards3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:44px}
   .pcard{background:#fff;border-radius:16px;overflow:hidden;border:1px solid var(--line);transition:.2s}
   .pcard:hover{transform:translateY(-4px);box-shadow:0 16px 36px rgba(94,3,95,.08)}
-  .pcard .thumb{height:170px;background:var(--lav2);display:flex;align-items:center;justify-content:center}
-  .pcard .thumb img{height:110px;width:auto;object-fit:contain}
+  .pcard .thumb{height:240px;background:var(--lav2);display:flex;align-items:stretch;justify-content:stretch;overflow:hidden}
+  .pcard .thumb img{height:100%;width:100%;object-fit:cover}
   .pcard .pbody{padding:24px}
   .pcard h3{font-size:19px;font-weight:600;color:var(--plum);margin-bottom:9px}
   .pcard p{color:var(--muted);font-size:14.5px}
@@ -162,12 +171,14 @@
     .burger{display:block}
     .hero .wrap{grid-template-columns:1fr;gap:40px;padding:60px 24px}
     .doe-grid,.essencial .wrap,.viabiliza .wrap{grid-template-columns:1fr;gap:38px}
+    .impact-grid{grid-template-columns:1fr}
     .cards3{grid-template-columns:1fr}
     .fgrid{grid-template-columns:1fr 1fr}
     .section{padding:60px 0}
     .ctafinal .box{padding:36px 24px}
   }
   @media(max-width:520px){
+    .pcard .thumb{height:200px}
     .fgrid{grid-template-columns:1fr}
     .values{grid-template-columns:1fr}
     .topbar .left{display:none}
@@ -249,6 +260,25 @@
       <p>Doar é capaz de elevar a felicidade do doador, gerando bem-estar psicológico e emocional — ao mesmo tempo em que mantém vivos projetos que mudam vidas.</p>
       <p>Se você quiser apoiar nossas atividades com doação em dinheiro, escolha entre as opções disponíveis. Nós providenciamos o recibo e mantemos você informado sobre os resultados da sua contribuição.</p>
       <div class="note">A instituição <strong>nunca</strong> irá te ligar pedindo doação. Toda contribuição é feita exclusivamente pelos canais oficiais.</div>
+      <div class="impact-panel">
+        <div class="label">Seu apoio em prática</div>
+        <div class="title">Cada contribuição vira atendimento, formação e cuidado direto.</div>
+        <div class="impact-grid">
+          <div class="impact-item">
+            <div class="n">01</div>
+            <div class="txt">Mantém cursos gratuitos para educadores e cuidadores.</div>
+          </div>
+          <div class="impact-item">
+            <div class="n">02</div>
+            <div class="txt">Sustenta ações de acolhimento para pessoas idosas.</div>
+          </div>
+          <div class="impact-item">
+            <div class="n">03</div>
+            <div class="txt">Garante transparência com recibo e prestação de contas.</div>
+          </div>
+        </div>
+        <span class="mini-cta">Doar é transformar presença em impacto</span>
+      </div>
     </div>
 
     <div class="card">
