@@ -8,3 +8,6 @@
 - **Implementação da logo SVG** (`memory/implementacao-da-logo-svg.md`) — A logo foi implementada como SVG sem cores fixas, uma decisão para garantir que ela herde automatica
 - **Design da Logo** (`memory/design-da-logo.md`) — A logo do projeto deve ser minimalista e um desenho contínuo em linha (SVG) que represente a letra '
 - **Informação de Localização** (`memory/informacao-de-localizacao.md`) — A cidade associada ao instituto e exibida no site (cabeçalho, rodapé, textos) deve ser 'São Paulo', 
+- **Design Adaptativo de Tema** (`memory/design-adaptativo-de-tema.md`) — Foi decidido usar a variável CSS `--ink` para a cor do texto do subtítulo (`.brand .name span`). Iss
+- **Estratégia de Cor para Textos** (`memory/estrategia-de-cor-para-textos.md`) — Para textos na logo e subtítulo, é preferível usar a variável de tema `--ink` em vez de cores fixas.
+- **Limitação da Ferramenta 'Antigravity'** (`memory/limitacao-da-ferramenta-antigravity.md`) — A ferramenta 'Antigravity' pode relatar mudanças nos arquivos, mas na verdade apenas simula as alter
