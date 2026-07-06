@@ -42,92 +42,92 @@
 <style>
   :root {
     color-scheme: light;
-    --plum:#0e6b5e;
-    --plum-2:#1a8a7a;
-    --mauve:#2aaa96;
-    --ink:#1a2d2a;
-    --muted:#5a7570;
-    --soft:#6b8380;
-    --lav:#f3faf9;
-    --lav2:#e6f5f3;
-    --line:#cde9e6;
-    --green:#1f9d57;
+    --plum:#004085;
+    --plum-2:#0056b3;
+    --mauve:#007bff;
+    --ink:#1a212d;
+    --muted:#5a6575;
+    --soft:#6b7883;
+    --lav:#f3f6fa;
+    --lav2:#e6eef5;
+    --line:#cde1e9;
+    --blue:#0d6efd;
     --white:#fff;
     --header-bg: rgba(255, 255, 255, 0.9);
-    --focus: #2aaa96;
-    --shadow-color: rgba(14, 107, 94, 0.07);
-    --shadow-burger: rgba(14, 107, 94, 0.12);
-    --hover-soft: #d0eeeb;
-    --bar-bg: #daf0ee;
-    --quote-mark: #a8ddd8;
+    --focus: #007bff;
+    --shadow-color: rgba(0, 86, 179, 0.07);
+    --shadow-burger: rgba(0, 86, 179, 0.12);
+    --hover-soft: #cce5ff;
+    --bar-bg: #b8daff;
+    --quote-mark: #99c2ff;
   }
 
   @media (prefers-color-scheme: dark) {
     html:not(.light):not(.dark) {
       color-scheme: dark;
-      --plum:#4dd8c8;
-      --plum-2:#6ae0d0;
-      --mauve:#82e8da;
-      --ink:#e8f5f3;
-      --muted:#8aafa8;
-      --soft:#7a9f99;
-      --lav:#0d1e1c;
-      --lav2:#142b28;
-      --line:#1e3d38;
-      --green:#2ec173;
-      --white:#090f0e;
-      --header-bg: rgba(9, 15, 14, 0.9);
-      --focus: #82e8da;
+      --plum:#66b0ff;
+      --plum-2:#80bdff;
+      --mauve:#99caff;
+      --ink:#e8f0f5;
+      --muted:#8aa4af;
+      --soft:#7a959f;
+      --lav:#0d161e;
+      --lav2:#14202b;
+      --line:#1e2d3d;
+      --blue:#5ba0eb;
+      --white:#090b0f;
+      --header-bg: rgba(9, 11, 15, 0.9);
+      --focus: #99caff;
       --shadow-color: rgba(0, 0, 0, 0.3);
       --shadow-burger: rgba(0, 0, 0, 0.4);
-      --hover-soft: #1a3d37;
-      --bar-bg: #132f2b;
-      --quote-mark: #2b6a60;
+      --hover-soft: #002752;
+      --bar-bg: #001a36;
+      --quote-mark: #003366;
     }
   }
 
   html.light {
     color-scheme: light;
-    --plum:#0e6b5e;
-    --plum-2:#1a8a7a;
-    --mauve:#2aaa96;
-    --ink:#1a2d2a;
-    --muted:#5a7570;
-    --soft:#6b8380;
-    --lav:#f3faf9;
-    --lav2:#e6f5f3;
-    --line:#cde9e6;
-    --green:#1f9d57;
+    --plum:#004085;
+    --plum-2:#0056b3;
+    --mauve:#007bff;
+    --ink:#1a212d;
+    --muted:#5a6575;
+    --soft:#6b7883;
+    --lav:#f3f6fa;
+    --lav2:#e6eef5;
+    --line:#cde1e9;
+    --blue:#0d6efd;
     --white:#fff;
     --header-bg: rgba(255, 255, 255, 0.9);
-    --focus: #2aaa96;
-    --shadow-color: rgba(14, 107, 94, 0.07);
-    --shadow-burger: rgba(14, 107, 94, 0.12);
-    --hover-soft: #d0eeeb;
-    --bar-bg: #daf0ee;
-    --quote-mark: #a8ddd8;
+    --focus: #007bff;
+    --shadow-color: rgba(0, 86, 179, 0.07);
+    --shadow-burger: rgba(0, 86, 179, 0.12);
+    --hover-soft: #cce5ff;
+    --bar-bg: #b8daff;
+    --quote-mark: #99c2ff;
   }
 
   html.dark {
     color-scheme: dark;
-    --plum:#4dd8c8;
-    --plum-2:#6ae0d0;
-    --mauve:#82e8da;
-    --ink:#e8f5f3;
-    --muted:#8aafa8;
-    --soft:#7a9f99;
-    --lav:#0d1e1c;
-    --lav2:#142b28;
-    --line:#1e3d38;
-    --green:#2ec173;
-    --white:#090f0e;
-    --header-bg: rgba(9, 15, 14, 0.9);
-    --focus: #82e8da;
+    --plum:#66b0ff;
+    --plum-2:#80bdff;
+    --mauve:#99caff;
+    --ink:#e8f0f5;
+    --muted:#8aa4af;
+    --soft:#7a959f;
+    --lav:#0d161e;
+    --lav2:#14202b;
+    --line:#1e2d3d;
+    --blue:#5ba0eb;
+    --white:#090b0f;
+    --header-bg: rgba(9, 11, 15, 0.9);
+    --focus: #99caff;
     --shadow-color: rgba(0, 0, 0, 0.3);
     --shadow-burger: rgba(0, 0, 0, 0.4);
-    --hover-soft: #1a3d37;
-    --bar-bg: #132f2b;
-    --quote-mark: #2b6a60;
+    --hover-soft: #002752;
+    --bar-bg: #001a36;
+    --quote-mark: #003366;
   }
 
   html.theme-preload *,
@@ -210,6 +210,10 @@
     border-radius:10px;padding:13px 24px;font-size:15px;transition:.18s;line-height:1}
   .btn-primary{background:var(--plum);color:#fff}
   .btn-primary:hover{background:var(--plum-2)}
+  .btn-donate-yellow{background:#f2c94c!important;color:#1a1a1a!important}
+  .btn-donate-yellow:hover{background:#e0b83e!important}
+  .btn-donate-nav{background:#2563eb}
+  .btn-donate-nav:hover{background:#1d4ed8}
   .btn-soft{background:var(--lav2);color:var(--plum)}
   .btn-soft:hover{background:var(--hover-soft)}
   .btn-outline{background:var(--white);color:var(--plum);border:1px solid var(--line)}
@@ -226,8 +230,8 @@
   header{position:sticky;top:0;z-index:50;background:var(--header-bg);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
   .nav{display:flex;align-items:center;justify-content:space-between;height:72px}
   .brand{display:flex;align-items:center;gap:11px}
-  .brand .mark{width:40px;height:40px;border-radius:11px;background:var(--plum);display:flex;align-items:center;justify-content:center;
-    color:#fff;font-family:'Poppins';font-weight:600;font-size:19px}
+  .brand .mark{width:30px;height:30px;border-radius:8px;background:transparent;border:1.5px solid var(--plum);display:flex;align-items:center;justify-content:center;
+    color:var(--plum);font-family:'Poppins';font-weight:600;font-size:14px}
   .brand .name{font-family:'Poppins';font-weight:600;font-size:17px;color:var(--plum);line-height:1.15}
   .brand .name span{display:block;font-size:10.5px;font-weight:400;letter-spacing:.6px;color:var(--soft);text-transform:uppercase}
   .menu{display:flex;gap:28px;align-items:center}
@@ -238,8 +242,8 @@
   .hero{background:linear-gradient(180deg,var(--lav) 0%,var(--white) 100%);position:relative;overflow:hidden}
   .hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center;padding:88px 24px}
   .badge{display:inline-flex;align-items:center;gap:8px;background:var(--white);border:1px solid var(--line);border-radius:999px;
-    padding:7px 15px;font-size:12.5px;font-family:'Poppins';font-weight:500;color:var(--plum)}
-  .badge .dot{width:7px;height:7px;border-radius:50%;background:var(--green)}
+    padding:7px 15px;font-size:12.5px;font-family:'Poppins';font-weight:500;color:#fff}
+  .badge .dot{width:7px;height:7px;border-radius:50%;background:var(--blue)}
   .hero h1{font-size:clamp(33px,4.6vw,52px);font-weight:700;line-height:1.12;margin:20px 0 18px;color:var(--ink);letter-spacing:-1px}
   .hero h1 em{font-style:normal;color:var(--plum)}
   .hero p{font-size:18px;color:var(--muted);max-width:500px;margin-bottom:28px}
@@ -289,7 +293,7 @@
   .val .desc{font-size:12px;color:var(--soft);margin-top:2px}
   .val.active{border-color:var(--plum);background:var(--lav)}
   .val.active .amount{color:var(--plum)}
-  .val .tag{position:absolute;top:-9px;right:10px;background:var(--green);color:#fff;font-size:10px;font-family:'Poppins';
+  .val .tag{position:absolute;top:-9px;right:10px;background:var(--blue);color:#fff;font-size:10px;font-family:'Poppins';
     font-weight:500;padding:3px 9px;border-radius:999px}
   .val.full{grid-column:1/-1}
   .val.full input{border:none;outline:none;font-family:'Poppins';font-weight:500;font-size:16px;width:100%;text-align:center;color:var(--plum);background:transparent}
@@ -298,8 +302,8 @@
   .progress-top{display:flex;justify-content:space-between;font-size:13.5px;margin-bottom:8px;color:var(--muted)}
   .progress-top b{font-family:'Poppins';color:var(--plum);font-weight:600}
   .bar{height:9px;background:var(--bar-bg);border-radius:999px;overflow:hidden}
-  .bar i{display:block;height:100%;width:100%;background:var(--green);border-radius:999px}
-  .progress-msg{margin-top:9px;font-size:12.5px;color:var(--green);font-weight:500;font-family:'Poppins'}
+  .bar i{display:block;height:100%;width:100%;background:var(--blue);border-radius:999px}
+  .progress-msg{margin-top:9px;font-size:12.5px;color:var(--blue);font-weight:500;font-family:'Poppins'}
   .card .btn{width:100%;justify-content:center}
   .secure{display:flex;align-items:center;justify-content:center;gap:6px;font-size:12px;color:var(--soft);margin-top:11px}
   .essencial .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
@@ -461,7 +465,7 @@
           <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
         </svg>
       </button>
-      <a href="#doar" class="btn btn-primary">Doar agora</a>
+      <a href="#doar" class="btn btn-primary btn-donate-nav">Doar agora</a>
       <button class="burger" aria-label="Menu">☰</button>
     </div>
   </div>
@@ -471,10 +475,10 @@
   <div class="wrap">
     <div>
       <span class="badge"><span class="dot"></span> Apoie nossos programas sociais</span>
-      <h1>Pequenos gestos que <em>mudam vidas</em> em Guarulhos</h1>
+      <h1>Pequenos gestos que <em>mudam vidas</em> em São Paulo</h1>
       <p>Desde 2005 capacitamos educadores infantis, cuidadores de idosos e projetos sociais que transformam comunidades inteiras.</p>
       <div class="hero-actions">
-        <a href="#doar" class="btn btn-primary">Quero fazer uma doação</a>
+        <a href="#doar" class="btn btn-primary btn-donate-nav">Quero fazer uma doação</a>
         <a href="#essencial" class="btn btn-outline">Conheça a causa</a>
       </div>
     </div>
@@ -557,7 +561,7 @@
           <div class="progress-msg">Meta alcançada — ampliando o impacto do projeto (+165%)</div>
         </div>
 
-        <button class="btn btn-primary" onclick="doar()">Fazer doação <span id="btnval">mensal de R$ 50</span></button>
+        <button class="btn btn-primary btn-donate-nav" onclick="doar()">Fazer doação <span id="btnval">mensal de R$ 50</span></button>
         <div class="secure">Você será redirecionado para o checkout seguro</div>
       </div>
     </div>
