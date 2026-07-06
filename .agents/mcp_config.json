@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "orbe": {
+      "args": [
+        "--mcp"
+      ],
+      "command": "/Users/patrickcardoso/workspace/orbe/src-tauri/target/debug/orbe",
+      "env": {
+        "ORBE_PREVIEW_OSID": "s1782745516436_162",
+        "ORBE_PREVIEW_ROOT": "/Users/patrickcardoso/workspace/ong-demo",
+        "ORBE_PREVIEW_SOCK": "/Users/patrickcardoso/Library/Application Support/com.patrickcardoso.orbe/severino/bridge.sock",
+        "ORBE_PROJECT_ROOT": "/Users/patrickcardoso/workspace/ong-demo"
+      }
+    }
+  }
+}
