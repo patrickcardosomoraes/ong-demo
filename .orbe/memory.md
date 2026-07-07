@@ -13,5 +13,5 @@
 - **Limitação da Ferramenta 'Antigravity'** (`memory/limitacao-da-ferramenta-antigravity.md`) — A ferramenta 'Antigravity' pode relatar mudanças nos arquivos, mas na verdade apenas simula as alter
 - **Projeto e Arquitetura** (`memory/projeto-e-arquitetura.md`) — O projeto é uma landing page completa e autocontida para o Acolher Instituto (ONG de Guarulhos/SP), 
 - **Solução Anti-FOUC** (`memory/solucao-anti-fouc.md`) — Para evitar o Flash of Unstyled Content (FOUC) no sistema de temas, um script síncrono inline lê o `
-- **Arquitetura de Projeto** (`memory/arquitetura-de-projeto.md`) — O projeto deve ser um único arquivo `index.html` e usar Three.js via CDN, sem a necessidade de um si
-- **Correção de Visibilidade UI** (`memory/correcao-de-visibilidade-ui.md`) — Foi descoberto que texto com cor `#fff` (branco hardcoded) ficava invisível no modo claro quando o f
+- **Correção de Visibilidade UI** (`memory/correcao-de-visibilidade-ui.md`) — Foi identificada uma armadilha visual onde o texto do badge na UI ficava invisível no modo claro dev
+- **Correção de visibilidade da UI** (`memory/correcao-de-visibilidade-da-ui.md`) — Foi identificado e corrigido um problema onde o texto de um badge (subtítulo) estava invisível no mo
