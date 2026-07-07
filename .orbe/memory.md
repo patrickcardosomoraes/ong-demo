@@ -11,3 +11,7 @@
 - **Design Adaptativo de Tema** (`memory/design-adaptativo-de-tema.md`) — Foi decidido usar a variável CSS `--ink` para a cor do texto do subtítulo (`.brand .name span`). Iss
 - **Estratégia de Cor para Textos** (`memory/estrategia-de-cor-para-textos.md`) — Para textos na logo e subtítulo, é preferível usar a variável de tema `--ink` em vez de cores fixas.
 - **Limitação da Ferramenta 'Antigravity'** (`memory/limitacao-da-ferramenta-antigravity.md`) — A ferramenta 'Antigravity' pode relatar mudanças nos arquivos, mas na verdade apenas simula as alter
+- **Projeto e Arquitetura** (`memory/projeto-e-arquitetura.md`) — O projeto é uma landing page completa e autocontida para o Acolher Instituto (ONG de Guarulhos/SP), 
+- **Solução Anti-FOUC** (`memory/solucao-anti-fouc.md`) — Para evitar o Flash of Unstyled Content (FOUC) no sistema de temas, um script síncrono inline lê o `
+- **Arquitetura de Projeto** (`memory/arquitetura-de-projeto.md`) — O projeto deve ser um único arquivo `index.html` e usar Three.js via CDN, sem a necessidade de um si
+- **Correção de Visibilidade UI** (`memory/correcao-de-visibilidade-ui.md`) — Foi descoberto que texto com cor `#fff` (branco hardcoded) ficava invisível no modo claro quando o f
